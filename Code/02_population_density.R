@@ -14,3 +14,4 @@ Errore in library(spatstat) : non c'è alcun pacchetto chiamato ‘spatstat’
 #da quello che ho visto su internet, il problema potrebbe risolversi da solo in un paio di giorni (oggi è il 29/9), una volta che il codice della nuova versione di spatstat sarà aggiornato
 
 #October 6th: how to insert an image in GitHub w/o the drag and drop
+#We did it, so now it is time to R; then, we moved to a theoretical explanation

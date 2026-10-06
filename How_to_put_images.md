@@ -12,3 +12,5 @@ Take an image and drop it in
 
 ## Create a folder, put the images there and link it on Markdown
 This method creates a permanent link to the folder, instead of a temporary link. 
+
+<img src="Images/dji_fly_20241226_054143_0_1735188103432_photo_low_quality.JPG">

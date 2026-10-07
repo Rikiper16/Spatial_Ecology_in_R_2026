@@ -52,5 +52,7 @@ plot(elevation)
 plot(densitymap)
 #sometimes, you might get an error, because there is too much space between the graph (which is default of the operating system) --> function dev.off(), for any graphical issue
 #does not really work with RStudio
+#tomorrow (Oct 8th) they will modify the colors --> I will miss it, but it's fine
+
 
 

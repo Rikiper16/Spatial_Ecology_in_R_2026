@@ -16,7 +16,9 @@ Errore in library(spatstat) : non c'è alcun pacchetto chiamato ‘spatstat’
 #October 6th: how to insert an image in GitHub w/o the drag and drop
 #We did it, so now it is time to R; then, we moved to a theoretical explanation
 #October 7th: we should do R today
+
 library(spatstat)
+
 #Recall data
 bei #dataset built in spatstat; it is a tree dataset; point pattern --> configuration of points in space
 #Looking at the points in space
@@ -31,5 +33,24 @@ plot(elevation)
 #Variables can also be selected in a different way
 elevation2 <- bei.extra[[1]] #if bei.extra was a table, you would only use []; but since bei.extra is a map, you need the double []
 #Basically, with the above method you are just selecting the variable number N of a given dataset; it is the preferred method of the teacher, so the one we will use for the rest of the course
+plot(elevation2)
+#Creating a new map; to know what a function does, you can write "?" and the name of the function, w/o using ""
+#density() is spatstat function, creating a kernel density map
+densitymap <- density(bei)
+plot(densitymap)
+#points can be plotted on top of the density map
+points(bei, cex=.5)
+#looking at the relationship between the density map and elevation
+#elevation is a key continuous parameter in the shaping of life
+#new concept: multiframe --> single image in which you put several plots at once; the function to do it is par()
+par(mfrow=c(1,2)) #the first number is rows, the second is columns
+plot(elevation)
+plot(densitymap)
+#Exercise: put elevation map on top of the density map
+par(mfrow=c(2,1))
+plot(elevation)
+plot(densitymap)
+#sometimes, you might get an error, because there is too much space between the graph (which is default of the operating system) --> function dev.off(), for any graphical issue
+#does not really work with RStudio
 
 

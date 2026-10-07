@@ -8,7 +8,7 @@ I pacchetti scaricati con il codice sorgente sono in
 	‘C:\Users\utente\AppData\Local\Temp\RtmpGUaKLn\downloaded_packages’
 > library(spatstat)
 Errore in library(spatstat) : non c'è alcun pacchetto chiamato ‘spatstat’
-> 
+
 #alla fine ci sono riuscito --> il pacchetto spatstat scaricava una versione di spatstat.univar che non gli andava bene (la 3.1-7), quando invece aveva bisogno della 3.2-0
 #ho risolto cercando su internet come forzare la versione 3.2-0; ho usato RTools 4.4 ed il pacchetto "remotes"
 #da quello che ho visto su internet, il problema potrebbe risolversi da solo in un paio di giorni (oggi è il 29/9), una volta che il codice della nuova versione di spatstat sarà aggiornato
@@ -53,6 +53,7 @@ plot(densitymap)
 #sometimes, you might get an error, because there is too much space between the graph (which is default of the operating system) --> function dev.off(), for any graphical issue
 #does not really work with RStudio
 #tomorrow (Oct 8th) they will modify the colors --> I will miss it, but it's fine
+
 
 
 

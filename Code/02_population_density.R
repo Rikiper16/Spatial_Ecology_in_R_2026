@@ -7,7 +7,7 @@ install.packages("spatstat")
 I pacchetti scaricati con il codice sorgente sono in
 	‘C:\Users\utente\AppData\Local\Temp\RtmpGUaKLn\downloaded_packages’
 > library(spatstat)
-Errore in library(spatstat) : non c'è alcun pacchetto chiamato ‘spatstat’
+Errore in library(spatstat) : non esiste alcun pacchetto chiamato ‘spatstat’
 
 #alla fine ci sono riuscito --> il pacchetto spatstat scaricava una versione di spatstat.univar che non gli andava bene (la 3.1-7), quando invece aveva bisogno della 3.2-0
 #ho risolto cercando su internet come forzare la versione 3.2-0; ho usato RTools 4.4 ed il pacchetto "remotes"
@@ -53,6 +53,34 @@ plot(densitymap)
 #sometimes, you might get an error, because there is too much space between the graph (which is default of the operating system) --> function dev.off(), for any graphical issue
 #does not really work with RStudio
 #tomorrow (Oct 8th) they will modify the colors --> I will miss it, but it's fine
+
+#October 8th: they finished the code
+#Change colors
+cl <- colRampPalette(c("blue", "green", "red"))
+#Plot the density map and change its colore using "cl"
+plot(densitymap, col=cl)
+#Change colors again
+cl <- colRampPalette(c("magenta1", "green", "mediumpurple"))
+plot(densitymap, col=cl)
+#Add nuances --> the number of nuances is specified within round parentheses, outside of the function parentheses
+cl3 <- colRampPalette(c("magenta1", "green", "mediumpurple"))(3)
+plot(densitymap, col=cl3)
+
+cl10 <- colRampPalette(c("magenta1", "green", "mediumpurple"))(10)
+plot(densitymap, col=cl10)
+
+cl100 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(100)
+plot(densitymap, col=cl100)
+
+#Exercise: plot a density map with 10 nuances on top of one with 100 nuances
+par(mfrow=c(2,1))
+plot(densitymap, col=cl10)
+plot(densitymap, col=cl100)
+
+#R colors
+#https://r-charts.com/colors/
+
+
 
 
 

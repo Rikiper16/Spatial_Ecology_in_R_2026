@@ -41,3 +41,26 @@ points(absence, col="orange") #used to add things to an extant plot
 elev <- system.file("external/elevation.asc", package="sdm")
 elevmap <- rast(elev) #rast() is the function to import raster data -> we previously used vect(), because the original dataset was a vector
 plot(elevmap)
+cl <- colorRampPalette(c("orange", "yellow", "violet"))(100) #in this case, the number of nuances is required
+plot(elevmap, col=cl)
+points(presence) #to add presences to the elevation map
+temp <- system.file("external/temperature.asc", package="sdm")
+tempmap <- rast(temp)
+cl2 <- colorRampPalette(c("black", "grey", "white"))(100) #cannot see anything
+cl2 <- colorRampPalette(c("blue", "green", "red"))(100)
+plot(tempmap, col=cl2)
+points(presence)
+# Same with precipitation
+prec <- system.file("external/precipitation.asc", package="sdm")
+precmap <- rast(prec)
+cl3 <- colorRampPalette(c("grey", "lightblue", "blue"))(100)
+plot(precmap, col=cl3)
+points(presence)
+#Same with vegetation
+veg <- system.file("external/vegetation.asc", package="sdm")
+vegmap <- rast(veg)
+cl4 <- colorRampPalette(c("yellow", "lightgreen", "green"))(100)
+plot(vegmap, col=cl4)
+points(presence)
+#then, we installed and activated "viridis" -> we will use it to change colors w/o using colorRampPalette()
+

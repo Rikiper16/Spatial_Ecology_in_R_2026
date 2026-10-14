@@ -79,7 +79,7 @@ plot(drivers, col=inferno(100)) #automatically creates a multiframe
 #if you want to add presence points, you need to use ChatGPT --> requires creating a new function, so it is very complicated --> we will solve this at the end of the course
 #to plot a single drivers from the stack --> you can subset the stack
 t <- drivers[[2]] #also works as t <- drivers$temperature --> it uses the original name, which is listed in the object "tempmap", so it's easier if you use layers rather than names
-
+plot(t) #you know what this does
 
 
 

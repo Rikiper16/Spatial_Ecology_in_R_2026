@@ -33,5 +33,11 @@ absence <- rana[rana$Occurrence != 1] #can also work with rana[rana$Occurrence =
 plot(presence)
 #Plotting presences and absences together
 plot(presence, col="blue")
-points(absence, col="orange") #used to add things inside an extant plot
-
+points(absence, col="orange") #used to add things to an extant plot
+#Oct 14th: I have also installed the package "viridis", which we might use today; I activated the packages terra, sdm, overlap, vegan
+#I have also rerun some commands to have the same objects and images as yesterday (Oct 13th)
+#files with .asc are raster data of different drivers of species distribution -> we now use them in the file
+#Load path to elevation file
+elev <- system.file("external/elevation.asc", package="sdm")
+elevmap <- rast(elev) #rast() is the function to import raster data -> we previously used vect(), because the original dataset was a vector
+plot(elevmap)

@@ -63,4 +63,24 @@ cl4 <- colorRampPalette(c("yellow", "lightgreen", "green"))(100)
 plot(vegmap, col=cl4)
 points(presence)
 #then, we installed and activated "viridis" -> we will use it to change colors w/o using colorRampPalette()
+#viridis has pre-installed palettes that are colorblind-friendly; do not use "turbo", because it is a rainbow palette, so it is not ideal; name of palettes are on the viridis page
+plot(elevmap, col=viridis(100)) #number of nuances is specified in the object
+#Plot the four maps together in the same multiframe
+par(mfrow=c(2,2))
+plot(elevmap, col=viridis(100), main="elev")
+plot(tempmap, col=inferno(100), main="temp")
+plot(precmap, col=mako(100), main="temp")
+plot(vegmap, col=cividis(100), main="veg") #we plotted all four (supposed) predictors in the same multiframe and in different color palettes
+#the professor uses names of the same length because it makes the code tidier
+#if you use the same color palette, you can make comparisons directly on the map, which is more intuitive; to add titles, use object "main="""
+#up until now, we have used the objects as separated, forcing us to use par() to create multiframes -> you can avoid this by making a stack
+drivers <- c(elevmap, tempmap, precmap, vegmap) #creating a stack using the objects we have
+plot(drivers, col=inferno(100)) #automatically creates a multiframe
+#if you want to add presence points, you need to use ChatGPT --> requires creating a new function, so it is very complicated --> we will solve this at the end of the course
+#to plot a single drivers from the stack --> you can subset the stack
+t <- drivers[[2]] #also works as t <- drivers$temperature --> it uses the original name, which is listed in the object "tempmap", so it's easier if you use layers rather than names
+
+
+
+
 

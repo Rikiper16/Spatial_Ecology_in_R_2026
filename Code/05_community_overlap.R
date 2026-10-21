@@ -5,7 +5,7 @@
 library(overlap)
 
 # Using the dataset
-data(kerinci) # https://it.wikipedia.org/wiki/Parco_nazionale_di_Kerinci_Seblat
+data(kerinci) # https://it.wikipedia.org/wiki/Parco_nazionale_di_Kerinci_Seblat; Kerinci is a national park in Indonesia
 kerinci
 head(kerinci)
 
@@ -16,7 +16,7 @@ tail(kerinci)
 summary(kerinci)
 #Also, remember to install and load the package "igraph"
 #From here, everything was done on Oct 20th
-# Circular time
+# Circular time --> basically, time becomes a clock
 circulartime <- kerinci$Time * 2 * pi
 
 # Putting the circular time inside the dataset

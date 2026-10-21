@@ -1,5 +1,5 @@
 #This was also done on Oct 20th
-# Copy paste the prevous code (04_community_overlap.R)
+# Copy paste the prevous code (05_community_overlap.R)
 
 # Plot the two densities of the tiger and the macaque one beside
 par(mfrow=c(1,2))

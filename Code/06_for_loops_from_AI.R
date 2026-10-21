@@ -20,3 +20,4 @@ for (i in species) {
 
 # Reset the plotting window
 par(mfrow = c(1, 1))
+#This is all to show that you can look inside and modify functions --> in code 07, we will learn to develop a function

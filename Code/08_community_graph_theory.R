@@ -33,3 +33,6 @@ plot(graph)
 set.seed(42)
 graph <- graph_from_data_frame(interactions, vertices=species) # directed=TRUE is the default
 plot(graph)
+#To install the imageRy package
+library(remotes)
+install_github("ducciorocchini/imageRy")

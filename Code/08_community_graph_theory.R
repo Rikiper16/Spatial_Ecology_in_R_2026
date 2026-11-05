@@ -36,3 +36,4 @@ plot(graph)
 #To install the imageRy package
 library(remotes)
 install_github("ducciorocchini/imageRy")
+#For the exam, take a careful look at the data_availability, the exam_example and the graph_theory documents on the teacher's GitHub
